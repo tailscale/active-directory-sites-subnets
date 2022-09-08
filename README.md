@@ -26,11 +26,11 @@ the other devices.
 
 The CLI tool takes a set of command-line arguments to map Tailscale
 [DERP Relay locations](https://tailscale.com/blog/how-tailscale-works/#encrypted-tcp-relays-derp)
-to the enarest Active Director Comain Controller. For example in a
+to the nearest Active Director Comain Controller. For example in a
 set of Domain Controllers in Atlanta, London, and Tokyo, one might use:
 ```
-ts-AD-sites.exe --map="nyc,ATL-DC" --map="ord,ATL-DC" --map="dfw,ATL-DC" \
-    --map="sin,TOK-DC" --map="syd,TOK-DC" --map="tok,TOK-DC" \
+ts-AD-sites.exe --map="nyc:ATL-DC" --map="ord:ATL-DC" --map="dfw:ATL-DC" \
+    --map="sin:TOK-DC" --map="syd:TOK-DC" --map="tok:TOK-DC" \
     -–map-default="LHR-DC"
 ```
 
@@ -48,8 +48,8 @@ New-ADReplicationSubnet -Name '100.100.101.104/32' -Location 'Tailscale' -Site L
 New-ADReplicationSubnet -Name 'fd7a:115c:a1e0:ab12:4843:cd96:6264:6568/128' -Location 'Tailscale' -Site LHR-DC
 ```
 
-Note that the tool makes no changes in the configuration of Active Directory, and
-indeed has no permissions to do so. It just outputs PowerShell commands to be
+Note that the tool makes no immediate changes in the configuration of Active Directory,
+and indeed has no permissions to do so. It just outputs PowerShell commands to be
 examined and run by a Domain Admin.
 
 | Name | Site | Location | Type | Description
