@@ -2,7 +2,7 @@ module ts-AD-sites
 
 go 1.19
 
-require tailscale.com v1.30.0
+require tailscale.com v1.32.3
 
 require (
 	filippo.io/edwards25519 v1.0.0-rc.1 // indirect
@@ -23,5 +23,5 @@ require (
 	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/sync v0.0.0-20220601150217-0de741cfad7f // indirect
 	golang.org/x/sys v0.5.0 // indirect
-	golang.zx2c4.com/wireguard/windows v0.4.10 // indirect
+	golang.zx2c4.com/wireguard/windows v0.5.3 // indirect
 )
